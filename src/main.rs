@@ -16,9 +16,6 @@ use stm32f3_discovery::{
     switch_hal::OutputSwitch,
 };
 
-#[allow(unused_imports)]
-use stm32f3_discovery::stm32f3xx_hal::interrupt;
-
 #[entry]
 fn main() -> ! {
     asm::nop(); // To not have main optimize to abort in release mode, remove when you add code
