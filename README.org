@@ -1,0 +1,21 @@
+#+TITLE: Blink-leds
+
+It's a beginner's project to learn to create and write code for the STM32F3DISCOVERY board.
+
+Warning: I had problems building a project at the start when I added the STM32F3-DISCOVERY crate. It
+was solved by adding the following lines:
+
+#+begin_src rust
+  #[allow(unused_imports)]
+  use stm32f3_discovery::stm32f3xx_hal::interrupt;
+#+end_src
+
+After completing the project, I removed the above lines and cleaned and built the project, and it
+was built successfully. I'm not sure what happened.
+
+* References
+
+- [[https://github.com/rubberduck203/stm32f3-discovery/blob/master/examples/leds.rs][stm32f3-discovery/examples/leds.rs]]
+- [[https://docs.rust-embedded.org/book/start/qemu.html#creating-a-non-standard-rust-program][Creating a non standard Rust program(The Embedded Rust Book)]]
+- [[https://crates.io/crates/stm32f3-discovery][stm32f3-discovery(crate.io)]]
+- [[https://crates.io/crates/stm32f3xx-hal][stm32f3xx-hal(create.io)]]
